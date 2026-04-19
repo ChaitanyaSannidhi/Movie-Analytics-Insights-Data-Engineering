@@ -1,0 +1,1558 @@
+{
+  "datasets": [
+    {
+      "name": "923ada39",
+      "displayName": "links_silver",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.links_silver",
+        "dimensions": [
+          {
+            "name": "movieId",
+            "expr": "source.movieId",
+            "displayName": "Movie Id"
+          },
+          {
+            "name": "imdbId",
+            "expr": "source.imdbId",
+            "displayName": "Imdb Id"
+          },
+          {
+            "name": "tmdbId",
+            "expr": "source.tmdbId",
+            "displayName": "Tmdb Id"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "88d7bbe3",
+      "displayName": "kpi_avg_rating_per_movie",
+      "queryLines": [
+        "SELECT * FROM workspace.default.kpi_avg_rating_per_movie"
+      ]
+    },
+    {
+      "name": "d574188b",
+      "displayName": "kpi_rating_trend_over_time",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_rating_trend_over_time",
+        "dimensions": [
+          {
+            "name": "year",
+            "expr": "source.year",
+            "displayName": "Year"
+          },
+          {
+            "name": "avg_rating",
+            "expr": "source.avg_rating",
+            "displayName": "Avg Rating"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "e9d47d2f",
+      "displayName": "kpi_avg_rating_per_genre",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_avg_rating_per_genre",
+        "dimensions": [
+          {
+            "name": "genre",
+            "expr": "source.genre",
+            "displayName": "Genre"
+          },
+          {
+            "name": "avg_rating",
+            "expr": "source.avg_rating",
+            "displayName": "Avg Rating"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "4521fd2d",
+      "displayName": "kpi_popular_genres",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_popular_genres",
+        "dimensions": [
+          {
+            "name": "genre",
+            "expr": "source.genre",
+            "displayName": "Genre"
+          },
+          {
+            "name": "total_ratings",
+            "expr": "source.total_ratings",
+            "displayName": "Total Ratings"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "78e14daf",
+      "displayName": "kpi_early_vs_late_ratings",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_early_vs_late_ratings",
+        "dimensions": [
+          {
+            "name": "rating_phase",
+            "expr": "source.rating_phase",
+            "displayName": "Rating Phase"
+          },
+          {
+            "name": "avg_rating",
+            "expr": "source.avg_rating",
+            "displayName": "Avg Rating"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "11571b37",
+      "displayName": "kpi_user_loyalty",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_user_loyalty",
+        "dimensions": [
+          {
+            "name": "userId",
+            "expr": "source.userId",
+            "displayName": "User Id"
+          },
+          {
+            "name": "genre",
+            "expr": "source.genre",
+            "displayName": "Genre"
+          },
+          {
+            "name": "genre_watch_count",
+            "expr": "source.genre_watch_count",
+            "displayName": "Genre Watch Count"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "9a2f9e9c",
+      "displayName": "kpi_controversial_movies",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_controversial_movies",
+        "dimensions": [
+          {
+            "name": "movieId",
+            "expr": "source.movieId",
+            "displayName": "Movie Id"
+          },
+          {
+            "name": "avg_rating",
+            "expr": "source.avg_rating",
+            "displayName": "Avg Rating"
+          },
+          {
+            "name": "rating_variance",
+            "expr": "source.rating_variance",
+            "displayName": "Rating Variance"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "comment": "Represents the total number of rows in the dataset. Use this measure to count all",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ratings_count_per_movie",
+      "displayName": "Ratings Count Per Movie",
+      "config": {
+        "version": "1.1",
+        "source": "workspace.default.kpi_total_ratings_per_movie",
+        "dimensions": [
+          {
+            "name": "movieId",
+            "expr": "source.movieId",
+            "displayName": "Movie ID"
+          },
+          {
+            "name": "total_ratings",
+            "expr": "source.total_ratings",
+            "displayName": "Total Ratings"
+          }
+        ],
+        "measures": [
+          {
+            "name": "count",
+            "expr": "COUNT(*)",
+            "displayName": "Count"
+          }
+        ]
+      }
+    },
+    {
+      "name": "movies_per_genre",
+      "displayName": "Movies Count per Genre",
+      "queryLines": [
+        "SELECT\n",
+        "  genre,\n",
+        "  COUNT(DISTINCT movieId) as movie_count\n",
+        "FROM\n",
+        "  movie_genre\n",
+        "GROUP BY\n",
+        "  genre\n",
+        "ORDER BY\n",
+        "  movie_count DESC"
+      ],
+      "catalog": "workspace",
+      "schema": "default"
+    },
+    {
+      "name": "high_ratings_by_genre",
+      "displayName": "High Ratings Count by Genre",
+      "queryLines": [
+        "SELECT\n",
+        "  mg.genre,\n",
+        "  COUNT(DISTINCT kr.movieId) as high_rating_count\n",
+        "FROM\n",
+        "  kpi_avg_rating_per_movie kr\n",
+        "    JOIN movie_genre mg\n",
+        "      ON kr.movieId = mg.movieId\n",
+        "WHERE\n",
+        "  kr.avg_rating >= 4.0\n",
+        "GROUP BY\n",
+        "  mg.genre\n",
+        "ORDER BY\n",
+        "  high_rating_count DESC"
+      ],
+      "catalog": "workspace",
+      "schema": "default"
+    },
+    {
+      "name": "user_activity_segmentation",
+      "displayName": "User Activity Segmentation",
+      "queryLines": [
+        "SELECT\n",
+        "  'Total Users' as category,\n",
+        "  COUNT(DISTINCT userId) as user_count,\n",
+        "  1 as sort_order\n",
+        "FROM\n",
+        "  ratings_silver\n",
+        "UNION ALL\n",
+        "SELECT\n",
+        "  'Active Users' as category,\n",
+        "  COUNT(DISTINCT userId) as user_count,\n",
+        "  2 as sort_order\n",
+        "FROM\n",
+        "  (\n",
+        "    SELECT\n",
+        "      userId,\n",
+        "      COUNT(*) as cnt\n",
+        "    FROM\n",
+        "      ratings_silver\n",
+        "    GROUP BY\n",
+        "      userId\n",
+        "    HAVING\n",
+        "      COUNT(*) >= 10\n",
+        "  )\n",
+        "UNION ALL\n",
+        "SELECT\n",
+        "  'Highly Active Users' as category,\n",
+        "  COUNT(DISTINCT userId) as user_count,\n",
+        "  3 as sort_order\n",
+        "FROM\n",
+        "  (\n",
+        "    SELECT\n",
+        "      userId,\n",
+        "      COUNT(*) as cnt\n",
+        "    FROM\n",
+        "      ratings_silver\n",
+        "    GROUP BY\n",
+        "      userId\n",
+        "    HAVING\n",
+        "      COUNT(*) >= 50\n",
+        "  )"
+      ],
+      "catalog": "workspace",
+      "schema": "default"
+    },
+    {
+      "name": "652e0763",
+      "displayName": "kpi_total_ratings_per_movie",
+      "queryLines": [
+        "SELECT * FROM workspace.default.kpi_total_ratings_per_movie"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "42e3a9db",
+      "displayName": "DASHBOARD",
+      "layout": [
+        {
+          "widget": {
+            "name": "a18675a2",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "88d7bbe3",
+                  "fields": [
+                    {
+                      "name": "movieId",
+                      "expression": "`movieId`"
+                    },
+                    {
+                      "name": "avg_rating",
+                      "expression": "`avg_rating`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "mark": {
+                "colors": [
+                  "#70079D",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "movieId",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_rating",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 8,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "rating-trend-over-time",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "d574188b",
+                  "fields": [
+                    {
+                      "name": "year",
+                      "expression": "`year`"
+                    },
+                    {
+                      "name": "avg_rating",
+                      "expression": "`avg_rating`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Rating Trend Over Time"
+              },
+              "mark": {
+                "colors": [
+                  "#A257C2",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "line",
+              "encodings": {
+                "x": {
+                  "fieldName": "year",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_rating",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 13,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "80955da4",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4521fd2d",
+                  "fields": [
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    },
+                    {
+                      "name": "total_ratings",
+                      "expression": "`total_ratings`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Popular Genres",
+                "showTitle": true
+              },
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "genre",
+                  "displayName": "Genre",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "total_ratings",
+                  "displayName": "Total Ratings",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "color": {
+                  "fieldName": "genre",
+                  "legend": {
+                    "hide": true
+                  },
+                  "displayName": "Genre",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "(no genres listed)",
+                        "color": "#6925A2"
+                      },
+                      {
+                        "value": "Western",
+                        "color": "#6C21BD"
+                      },
+                      {
+                        "value": "War",
+                        "color": "#8858BD"
+                      },
+                      {
+                        "value": "Thriller",
+                        "color": "#C0B1CE"
+                      },
+                      {
+                        "value": "Film-Noir",
+                        "color": {
+                          "themeColorType": "visualizationColors",
+                          "position": 9
+                        }
+                      },
+                      {
+                        "value": "Horror",
+                        "color": "#8370A3"
+                      },
+                      {
+                        "value": "Adventure",
+                        "color": "#9A70B2"
+                      },
+                      {
+                        "value": "Romance",
+                        "color": "#A987C7"
+                      },
+                      {
+                        "value": "Animation",
+                        "color": "#B39BCA"
+                      },
+                      {
+                        "value": "Action",
+                        "color": "#AC84C4"
+                      },
+                      {
+                        "value": "Drama",
+                        "color": "#613778"
+                      },
+                      {
+                        "value": "Comedy",
+                        "color": "#7D30A2"
+                      },
+                      {
+                        "value": "Crime",
+                        "color": "#B695D1"
+                      },
+                      {
+                        "value": "Sci-Fi",
+                        "color": "#CEB9DF"
+                      },
+                      {
+                        "value": "Fantasy",
+                        "color": "#A079C2"
+                      },
+                      {
+                        "value": "Children",
+                        "color": "#8758A8"
+                      },
+                      {
+                        "value": "Mystery",
+                        "color": "#C38BE7"
+                      },
+                      {
+                        "value": "IMAX",
+                        "color": "#8769B4"
+                      },
+                      {
+                        "value": "Musical",
+                        "color": "#8C65AD"
+                      },
+                      {
+                        "value": "Documentary",
+                        "color": "#9A5BC4"
+                      }
+                    ]
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 3,
+            "width": 8,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "select-genres",
+            "queries": [
+              {
+                "name": "dashboards/01f13a82fc031283b6e1fade7db5409a/datasets/01f13a85c54519438a9923a105aa186a_genre",
+                "query": {
+                  "datasetName": "4521fd2d",
+                  "fields": [
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    },
+                    {
+                      "name": "genre_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Select Genres"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "genre",
+                    "queryName": "dashboards/01f13a82fc031283b6e1fade7db5409a/datasets/01f13a85c54519438a9923a105aa186a_genre"
+                  }
+                ]
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#A272B5"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 1,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "user-genre-preference-analysis",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "11571b37",
+                  "fields": [
+                    {
+                      "name": "userId",
+                      "expression": "`userId`"
+                    },
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    },
+                    {
+                      "name": "genre_watch_count",
+                      "expression": "`genre_watch_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "style": {
+                "fontColor": {
+                  "dark": "#040404"
+                }
+              },
+              "frame": {
+                "showTitle": true,
+                "title": "User Genre Preference Analysis"
+              },
+              "widgetType": "table",
+              "encodings": {
+                "columns": [
+                  {
+                    "fieldName": "userId"
+                  },
+                  {
+                    "fieldName": "genre"
+                  },
+                  {
+                    "fieldName": "genre_watch_count"
+                  }
+                ]
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#CCA3DD",
+                "dark": "#9F7AB5"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 8,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "98aa6b43",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "ratings_count_per_movie",
+                  "fields": [
+                    {
+                      "name": "sum(movieId)",
+                      "expression": "SUM(`movieId`)"
+                    },
+                    {
+                      "name": "sum(total_ratings)",
+                      "expression": "SUM(`total_ratings`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Ratings Count Per Movie",
+                "showTitle": true
+              },
+              "style": {
+                "fontColor": {
+                  "dark": "#7E2CAF"
+                }
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "sum(total_ratings)",
+                  "displayName": "Total Ratings"
+                },
+                "target": {
+                  "fieldName": "sum(movieId)",
+                  "displayName": "Movie ID"
+                }
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#AA97D8"
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 1,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "4b51009c",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "4521fd2d",
+                  "fields": [
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    },
+                    {
+                      "name": "total_ratings",
+                      "expression": "`total_ratings`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Number of Ratings per Genre",
+                "showTitle": true
+              },
+              "style": {
+                "fontColor": {
+                  "dark": "#792E94"
+                }
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "total_ratings",
+                  "displayName": "Total Ratings"
+                },
+                "target": {
+                  "fieldName": "genre",
+                  "displayName": "Genre"
+                }
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#B799C9"
+              }
+            }
+          },
+          "position": {
+            "x": 9,
+            "y": 1,
+            "width": 3,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "8c089d82",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "movies_per_genre",
+                  "fields": [
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    },
+                    {
+                      "name": "movie_count",
+                      "expression": "`movie_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Number of Movies per Genre",
+                "showTitle": true
+              },
+              "style": {
+                "fontColor": {
+                  "light": "#5A1C8A",
+                  "dark": "#771DAC"
+                }
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "movie_count",
+                  "displayName": "Movie Count"
+                },
+                "target": {
+                  "fieldName": "genre",
+                  "displayName": "Genre"
+                }
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#B99FD1"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 3,
+            "width": 4,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "5657cb03",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "high_ratings_by_genre",
+                  "fields": [
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    },
+                    {
+                      "name": "high_rating_count",
+                      "expression": "`high_rating_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "title": "Count of High Ratings (4 & above)",
+                "showTitle": true
+              },
+              "style": {
+                "fontColor": {
+                  "dark": "#9948B5"
+                }
+              },
+              "widgetType": "counter",
+              "encodings": {
+                "value": {
+                  "fieldName": "high_rating_count",
+                  "displayName": "High Rating Count"
+                },
+                "target": {
+                  "fieldName": "genre",
+                  "displayName": "Genre"
+                }
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#B49FC6"
+              }
+            }
+          },
+          "position": {
+            "x": 4,
+            "y": 1,
+            "width": 2,
+            "height": 2
+          }
+        },
+        {
+          "widget": {
+            "name": "year",
+            "queries": [
+              {
+                "name": "dashboards/01f13a82fc031283b6e1fade7db5409a/datasets/01f13a850c8f109caadb166e5dfd2cb3_year",
+                "query": {
+                  "datasetName": "d574188b",
+                  "fields": [
+                    {
+                      "name": "year",
+                      "expression": "`year`"
+                    },
+                    {
+                      "name": "year_associativity",
+                      "expression": "COUNT_IF(`associative_filter_predicate_group`)"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 2,
+              "frame": {
+                "showTitle": true,
+                "title": "Year",
+                "headerAlignment": "left"
+              },
+              "widgetType": "filter-single-select",
+              "encodings": {
+                "fields": [
+                  {
+                    "fieldName": "year",
+                    "queryName": "dashboards/01f13a82fc031283b6e1fade7db5409a/datasets/01f13a850c8f109caadb166e5dfd2cb3_year"
+                  }
+                ]
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#D8BDE1"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 2,
+            "width": 4,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "dd787134",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "11571b37",
+                  "fields": [
+                    {
+                      "name": "countdistinct(userId)",
+                      "expression": "COUNT(DISTINCT `userId`)"
+                    },
+                    {
+                      "name": "genre",
+                      "expression": "`genre`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "Users per Genre",
+                "showTitle": true
+              },
+              "widgetType": "pie",
+              "encodings": {
+                "angle": {
+                  "fieldName": "countdistinct(userId)",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "User Count"
+                },
+                "color": {
+                  "fieldName": "genre",
+                  "displayName": "Genre",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "Drama",
+                        "color": "#9C1EA6"
+                      },
+                      {
+                        "value": "Comedy",
+                        "color": "#C88BE7"
+                      },
+                      {
+                        "value": "Action",
+                        "color": "#B780CC"
+                      },
+                      {
+                        "value": "Thriller",
+                        "color": "#B14DCF"
+                      },
+                      {
+                        "value": "Adventure",
+                        "color": "#AA58D3"
+                      },
+                      {
+                        "value": "Crime",
+                        "color": "#9540AB"
+                      },
+                      {
+                        "value": "Romance",
+                        "color": "#CE8BE7"
+                      },
+                      {
+                        "value": "Sci-Fi",
+                        "color": "#9C40AB"
+                      },
+                      {
+                        "value": "Fantasy",
+                        "color": "#8435A1"
+                      },
+                      {
+                        "value": "Children",
+                        "color": "#BD2CF2"
+                      },
+                      {
+                        "value": "Animation",
+                        "color": "#9F67BB"
+                      },
+                      {
+                        "value": "Mystery",
+                        "color": "#A54CC0"
+                      },
+                      {
+                        "value": "Horror",
+                        "color": "#894FB6"
+                      },
+                      {
+                        "value": "IMAX",
+                        "color": "#9E55B5"
+                      },
+                      {
+                        "value": "Musical",
+                        "color": "#944B99"
+                      },
+                      {
+                        "value": "War",
+                        "color": "#E3A1FC"
+                      },
+                      {
+                        "value": "Documentary",
+                        "color": "#A425BF"
+                      },
+                      {
+                        "value": "Western",
+                        "color": "#8C4395"
+                      }
+                    ]
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 16,
+            "width": 6,
+            "height": 5
+          }
+        },
+        {
+          "widget": {
+            "name": "evolution-user-ratings-early-vs-late-phase-analysis",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "9a2f9e9c",
+                  "fields": [
+                    {
+                      "name": "avg_rating",
+                      "expression": "`avg_rating`"
+                    },
+                    {
+                      "name": "rating_variance",
+                      "expression": "`rating_variance`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Evolution of User Ratings: Early vs Late Phase Analysis"
+              },
+              "mark": {
+                "colors": [
+                  "#9342D2",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ],
+                "shape": "circle",
+                "size": 2.8
+              },
+              "widgetType": "scatter",
+              "encodings": {
+                "x": {
+                  "fieldName": "avg_rating",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "rating_variance",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 17,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "dc61cb7a",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "user_activity_segmentation",
+                  "fields": [
+                    {
+                      "name": "category",
+                      "expression": "`category`"
+                    },
+                    {
+                      "name": "user_count",
+                      "expression": "`user_count`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "title": "User Activity Funnel",
+                "showTitle": true
+              },
+              "widgetType": "funnel",
+              "encodings": {
+                "x": {
+                  "fieldName": "user_count",
+                  "scale": {
+                    "type": "quantitative"
+                  },
+                  "displayName": "User Count"
+                },
+                "y": {
+                  "fieldName": "category",
+                  "displayName": "Category",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "color": {
+                  "fieldName": "category",
+                  "legend": {
+                    "position": "right"
+                  },
+                  "displayName": "Category",
+                  "scale": {
+                    "type": "categorical",
+                    "mappings": [
+                      {
+                        "value": "Active Users",
+                        "color": "#912ABB"
+                      },
+                      {
+                        "value": "Highly Active Users",
+                        "color": "#B83EC9"
+                      },
+                      {
+                        "value": "Total Users",
+                        "color": "#BF75D0"
+                      }
+                    ]
+                  }
+                },
+                "label": {
+                  "show": true
+                }
+              }
+            }
+          },
+          "position": {
+            "x": 6,
+            "y": 12,
+            "width": 6,
+            "height": 4
+          }
+        },
+        {
+          "widget": {
+            "name": "a59c1da2",
+            "multilineTextboxSpec": {
+              "lines": [
+                "<span style=\"text-align:center;display:block\"><span style=\"font-size: 24px;color: #FFFFFF;\">**Movie Analytics Dashboard: User Behavior & Rating Insights**</span></span>"
+              ],
+              "verticalAlign": "VERTICAL_ALIGN_CENTER"
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "dark": "#100101"
+              },
+              "widgetBorderColor": {
+                "dark": "#040404"
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 12,
+            "height": 1
+          }
+        },
+        {
+          "widget": {
+            "name": "identifies-most-popular-movies-based-on-user-engagement",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "652e0763",
+                  "fields": [
+                    {
+                      "name": "movieId",
+                      "expression": "`movieId`"
+                    },
+                    {
+                      "name": "total_ratings",
+                      "expression": "`total_ratings`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "frame": {
+                "showTitle": true,
+                "title": "Identifies the most popular movies based on user engagement"
+              },
+              "mark": {
+                "colors": [
+                  "#D1BAD9",
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 2
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 3
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 4
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 5
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 6
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 7
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 8
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 9
+                  },
+                  {
+                    "themeColorType": "visualizationColors",
+                    "position": 10
+                  }
+                ]
+              },
+              "widgetType": "waterfall",
+              "encodings": {
+                "x": {
+                  "fieldName": "movieId",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                },
+                "y": {
+                  "fieldName": "total_ratings",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              }
+            },
+            "specExtensions": {
+              "widgetBackgroundColor": {
+                "light": "#C497D5"
+              }
+            }
+          },
+          "position": {
+            "x": 8,
+            "y": 5,
+            "width": 4,
+            "height": 3
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS",
+      "layoutVersion": "GRID_V1"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "canvasBackgroundColor": {
+        "light": "#FAFAFE",
+        "dark": "#1F272D"
+      },
+      "widgetBackgroundColor": {
+        "light": "#FFFFFF",
+        "dark": "#18111C"
+      },
+      "widgetBorderColor": {
+        "light": "#A49A9A"
+      },
+      "fontColor": {
+        "light": "#11171C",
+        "dark": "#E8ECF0"
+      },
+      "selectionColor": {
+        "light": "#2272B4",
+        "dark": "#FFFAFA"
+      },
+      "visualizationColors": [
+        "#077A9D",
+        "#FFAB00",
+        "#00A972",
+        "#FF3621",
+        "#8BCAE7",
+        "#AB4057",
+        "#99DDB4",
+        "#FCA4A1",
+        "#919191",
+        "#BF7080"
+      ],
+      "widgetHeaderAlignment": "LEFT"
+    },
+    "applyModeEnabled": true
+  }
+}
